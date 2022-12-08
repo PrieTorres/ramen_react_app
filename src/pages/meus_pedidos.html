@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seus pedidos</title>
+    <link rel="shortcut icon" href="img/logo/Item_Ramen_Tonkotsu.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/meus-pedidos/pedido-containers.css">
+    <link rel="stylesheet" href="css/meus-pedidos/container-pedidos.css">
+
+    <script src="./js/carregarPedidos.js"></script>
+    <script>
+        //renderizarPedidos(meusPedidos, 'container-pedidos')
+    </script>
+</head>
+<body>
+    <header class="cabecalho-principal">
+        <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Ramen-lhama</span></h1>
+        <nav class="cabecalho-principal__nav">
+            <ul class="cabecalho-principal__nav-lista">
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="index.html">Home</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="montagem.html">Monte o seu Rámen!</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="menu.html">Menu <p class="texto-invisivel">cardápio com todos os rámens e combos</p></a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link ativo" href="meus_pedidos.html">Meus Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container-pedidos" >
+        <div class="pedido-container">
+            <div class="imagem-pedido">
+                <img src="./img/ramens/desenho-ramen.png" alt="ramen delicioso">
+            </div>
+            <div class="infos-pedido">
+                <p class="hora-pedido">Pedido feito às 21:34</p>
+                <ul class="itens-pedido">
+                    <li class="item-pedido">Ramen de frango médio apimentado</li>
+                    <li class="item-pedido">Ramen de Chashu grande tradicional</li>
+                    <li class="item-pedido">Combo Familia</li>
+                </ul>
+                <p class="info-pagamento">
+                    Total: R$  ---- Pagamento na entrega                
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer class="rodape-principal">
+        <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
+    </footer>
+</body>
+<script>
+    renderizarPedidos(undefined, 'container-pedidos');
+</script>
+</html>

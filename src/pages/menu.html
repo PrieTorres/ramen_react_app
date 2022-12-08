@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O melhor da comida oriental</title>
+    <link rel="shortcut icon" href="img/logo/Item_Ramen_Tonkotsu.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <script src="js/ramens_json.js"></script>
+    <script src="js/adicionarAoCarrinho.js"></script>
+    <link rel="stylesheet" href="css/menu/container-ramens.css">
+    <link rel="stylesheet" href="css/menu/caixa-ramen.css">
+    <link rel="stylesheet" href="css/flip_effect.css">
+    <link rel="stylesheet" href="css/menu/container-combos.css">
+    <link rel="stylesheet" href="css/menu/carrosel-combos.css">
+    <link rel="stylesheet" href="css/carrinho-alert.css">
+    <script src="js/manipuladorObjeto.js"></script>
+    <script>
+        carregarObjeto();
+    </script>
+</head>
+<body>
+    <header class="cabecalho-principal">
+        <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Ramen-lhama</span></h1>
+        <nav class="cabecalho-principal__nav">
+            <ul class="cabecalho-principal__nav-lista">
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="index.html">Home</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="montagem.html">Monte o seu Rámen!</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link ativo" href="menu.html">Menu <p class="texto-invisivel">cardápio com todos os rámens e combos</p></a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="meus_pedidos.html">Meus Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="conteudo-principal" id="container-ramens">
+        <div class="container_combos" id="container_carrosel_combos">
+            <!-- vão ser escritos pelo javascript -->
+        </div>
+       <div class="container_ramens">
+            <!-- vão ser escritos pelo javascript -->
+       </div>
+    </main>
+    <footer class="rodape-principal">
+        <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
+    </footer>
+
+    <!-- carrinho alert -->
+    <div class="carrinho-alert-background" id="carrinho-alert-background">
+    </div>
+    <div class="carrinho-alert" >
+        <span class="carrinho-alert__confere"></span>
+        <p class="carrinho-alert__texto">item adicionado ao carrinho!</p>
+        <label class="carrinho-alert__quantidade">Quantidade:
+            <input type="number" name="quantidade" id="quantidade_ramens" max="30" maxlength="2" min="1" value="1">
+        </label>
+        <button class="carrinho-alert__botao" onclick="alterarNumero(); salvarObjeto(carrinho); redirect();">ir ao carrinho</button>
+        <button class="carrinho-alert__botao" onclick="fecharCarrinho(); alterarNumero()">Continuar comprando</button>
+    </div>
+
+    <!-- fim carrinho alert-->
+
+    <script src="js/montadorCombosMenu.js"></script>
+    <script> escreverHTMLCombos(0); </script>
+
+    <script src="js/montadorRamensMenu.js"></script>
+    <script> escreveRamensJSON(); </script>
+
+    <script src="js/abrirCarrinho.js"></script>
+    <script src="js/manipuladorObjeto.js"></script>
+    <script src="js/click_estilizador.js"></script>
+</body>
+</html>

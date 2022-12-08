@@ -1,0 +1,35 @@
+/*.opcoes-tamanho__container{
+
+}*/
+.opcoes-tamanho__lista{
+    display: flex;
+    padding: 10px;
+}
+.opcoes-tamanho__opcao{
+    background-color: var(--branco);
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: monospace;
+    border-radius: 50%;
+    user-select: none; 
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+}
+.opcoes-tamanho__opcao:first-child,
+.opcoes-tamanho__opcao:last-child{
+    margin-left: 0;
+    margin-right: 0;
+}
+.opcoes-tamanho__opcao.ativo{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 3px 0px var(--shadow);
+    background-color: var(--botao-base);
+    color: var(--branco);
+}
+.opcoes-tamanho__opcao:hover{
+    cursor: pointer;
+}

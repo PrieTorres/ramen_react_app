@@ -1,0 +1,71 @@
+.conteudo-principal-topo__container-bg{
+    width: 100vw;
+    height: 90vh;
+    background: url('../../img/ramens/ramen-picante.jpg') no-repeat;
+    background-size: cover;
+}
+.conteudo-principal-topo__container{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--linear-preto-Mbranco);
+    padding: 90px 50px;
+    padding-bottom: 0;
+}
+
+.conteudo-principal-topo__container--caixa-texto{
+    max-width: 30%;
+    float: right;
+}
+
+.conteudo-principal-topo__container--texto{
+    font-family: var(--fonte-padrao);
+    font-size: 5em;
+    font-weight: 400;
+}
+
+.conteudo-principal-topo__container--botao{
+    font-size: 1.25rem;
+    margin-top: 3rem;
+    padding: 15px;
+    border-radius: 5px;
+    transition: all .825s ease;
+    background-color: #00000000;
+}
+.conteudo-principal-topo__container--botao:hover{
+    background-color: var(--botao-base);
+    color: var(--branco);
+}
+
+@media screen and (max-width: 1024px) {
+    .conteudo-principal-topo__container--caixa-texto{
+        max-width: 70%;
+        margin: 0 15%;
+        text-align: center;
+        max-height: calc(100%-240px);
+    }
+    .conteudo-principal-topo__container--texto{
+        font-size: 5.25em;
+    }
+    .conteudo-principal-topo__container-bg{
+        height: 60vh;
+    }
+    .conteudo-principal-topo__container{
+        padding: 5vh 30px;
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .conteudo-principal-topo__container--texto{
+        font-size: 3.5em;
+    }
+    .conteudo-principal-topo__container{
+        background: #ffffffad;
+    }
+    .conteudo-principal-topo__container--botao{
+        margin-top: 2rem;
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

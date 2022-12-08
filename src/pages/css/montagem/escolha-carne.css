@@ -1,0 +1,15 @@
+.escolha-carne--chashu::before{
+    background-image: url('../../img/ingredientes/chashu.jpg');
+}
+.escolha-carne--nitamago::before{
+    background-image: url('../../img/ingredientes/Nitamago.jpg');
+}
+.escolha-carne--frango::before{
+    background-image: url('../../img/ingredientes/frango.jpg');
+}
+.escolha-carne--bacon::before{
+    background-image: url('../../img/ingredientes/bacon.jpg');
+}
+.escolha-carne--vegetariano::before{
+    background-image: url('../../img/ingredientes/vegetariano.jpg');
+}

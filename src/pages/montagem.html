@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte o seu Rámen!</title>
+    <link rel="shortcut icon" href="img/logo/Item_Ramen_Tonkotsu.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/montagem/conteudo-principal.css">
+    <link rel="stylesheet" href="css/montagem/formulario-principal.css">
+    <link rel="stylesheet" href="css/carrinho-alert.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/montagem/escolha-carne.css">
+    <link rel="stylesheet" href="css/montagem/escolha-caldo.css">
+    <link rel="stylesheet" href="css/montagem/escolha-complementos.css">
+    <link rel="stylesheet" href="css/montagem/escolha-tamanho.css">
+    <!--scripts apenas com objetos, não é necessário carregamento da página e é importante que estejam antes dos demais scripts que fazem uso desses objetos-->
+    <script src="js/oo/Ramen.js"></script>
+    <script src="js/ramens_json.js"></script>
+    <script src="js/manipuladorObjeto.js"></script>
+    <script>
+        carregarObjeto();
+    </script>
+</head>
+<body style="transition: all .8s ease;">
+    <header class="cabecalho-principal">
+        <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Monta-Rámen</span></h1>
+        <nav class="cabecalho-principal__nav">
+            <ul class="cabecalho-principal__nav-lista">
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="index.html">Home</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link ativo" href="montagem.html">Monte o seu Rámen!</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="menu.html">Menu <p class="texto-invisivel">cardápio com todos os rámens e combos</p></a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="meus_pedidos.html">Meus Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="conteudo-principal">
+        <div class="conteudo-principal__banner-bg">
+            <div class="conteudo-principal__banner"></div>
+        </div>
+        <div class="formulario-principal">
+            
+            <fieldset class="campo-escolha campo-escolha escolha-carne">
+                <legend class="campo-escolha__legenda">carne desejada:</legend> 
+                <label class="escolha-carne--chashu campo-escolha__texto-escolha">Chashu (carne de porco)
+                    <input class="campo-escolha__escolha carne" name="carne" value="Chashu" type="radio">
+                </label><br>
+                <label class="escolha-carne--nitamago
+                campo-escolha__texto-escolha">Nitamago (porco e ovos)
+                    <input class="campo-escolha__escolha carne" name="carne" value="Nitamago" type="radio">
+                </label><br>
+                <label class="escolha-carne--frango
+                campo-escolha__texto-escolha">Frango
+                    <input class="campo-escolha__escolha carne" name="carne" value="Frango" type="radio">
+                </label><br>
+                <label class="escolha-carne--bacon
+                campo-escolha__texto-escolha">Bacon
+                    <input class="campo-escolha__escolha carne" name="carne" value="Bacon" type="radio">
+                </label><br>
+                <label class="escolha-carne--vegetariano
+                campo-escolha__texto-escolha">Vegetariano
+                    <input class="campo-escolha__escolha carne" name="carne" value="Vegetariano" type="radio">
+                </label>
+            </fieldset>
+            <fieldset class="campo-escolha escolha-caldo">
+                <legend class="campo-escolha__legenda">caldo desejado:</legend> 
+                <label class="campo-escolha__texto-escolha
+                escolha-caldo--agridoce">Agridoce
+                    <input class="campo-escolha__escolha caldo" name="caldo" value="Agridoce" type="radio">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-caldo--tradicional">Tradicional
+                    <input class="campo-escolha__escolha caldo" name="caldo" value="Tradicional" type="radio">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-caldo--apimentado-leve">Apimentado leve
+                    <input class="campo-escolha__escolha caldo" name="caldo" value="Apimentado leve" type="radio">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-caldo--apimentado">Apimentado
+                    <input class="campo-escolha__escolha caldo" name="caldo" value="Apimentado" type="radio">
+                </label>
+            </fieldset>
+            <fieldset class="campo-escolha escolha-complementos">
+                <legend class="campo-escolha__legenda">complementos desejados:</legend> 
+                <label class="campo-escolha__texto-escolha
+                escolha-complementos--cebolinha">Cebolinha
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Cebolinha" type="checkbox">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-complementos--shitake">Shitake (cogumelo)
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Shitake" type="checkbox">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-complementos--batata-doce">Batata doce 
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Batata doce" type="checkbox">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-complementos--kombu">Kombu (alga)
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Kombu" type="checkbox">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-complementos--gergelim">Gergelim
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Gergelim" type="checkbox">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-complementos--cebola-crispy">Cebola crispy
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Cebola" type="checkbox">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-complementos--menma">Menma (brotos de bambu)
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Menma" type="checkbox">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-complementos--nori">Nori
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="nori" type="checkbox">
+                </label><br>
+            </fieldset>
+            <fieldset class="campo-escolha escolha-tamanho">
+                <legend class="campo-escolha__legenda">tamanho desejado:</legend> 
+                <label class="campo-escolha__texto-escolha
+                escolha-tamanho--pequeno">P (200g)
+                    <input class="campo-escolha__escolha tamanho" name="tam" value="pequeno" type="radio">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-tamanho--medio">M (350g)
+                    <input class="campo-escolha__escolha tamanho" name="tam" value="medio" type="radio">
+                </label><br>
+                <label class="campo-escolha__texto-escolha
+                escolha-tamanho--grande">G (480g)
+                    <input class="campo-escolha__escolha tamanho" name="tam" value="grande" type="radio">
+                </label>
+            </fieldset>
+
+            <button class="formulario-principal__botao" onclick="montarRamen(), abrirCarrinho(ramensJson_personalizado)">Pronto!</button>
+        </div>
+        
+    </main>
+    <footer class="rodape-principal">
+        <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
+    </footer>
+
+    <!-- inicio carrinho alert -->
+    <div class="carrinho-alert-background" id="carrinho-alert-background">
+    </div>
+    <div class="carrinho-alert" >
+        <span class="carrinho-alert__confere"></span>
+        <p class="carrinho-alert__texto">item adicionado ao carrinho!</p>
+        <label class="carrinho-alert__quantidade">Quantidade:
+            <input type="number" name="quantidade" id="quantidade_ramens" max="30" maxlength="2" min="1" value="1">
+        </label>
+        <button class="carrinho-alert__botao" onclick="alterarNumero('personalizado'); carrinho.push(...ramensJson_personalizado); salvarObjeto(carrinho); redirect()">ir ao carrinho</button>
+        <button class="carrinho-alert__botao" onclick="fecharCarrinho();">Continuar comprando</button>
+    </div>
+    <!-- fim carrinho alert -->
+    
+    <script src="js/ramens_json.js"></script>
+    <script src="js/montagem.js"></script>
+    <script src="js/abrirCarrinho.js"></script>
+    <script src="js/manipuladorObjeto.js"></script>
+</body>
+</html>

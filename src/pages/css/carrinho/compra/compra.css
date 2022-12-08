@@ -1,0 +1,62 @@
+@import './compra__selecao-pagamento__opcoes.css';
+@import './compra__selecao_pagamento.css';
+@import './pagamento-online/pagamento-online.css';
+@import './pagamento-entrega/pagamento-entrega.css';
+
+.compra, .save-nota-fiscal{
+  width: 70vw;
+  height: 70vh;
+  position: absolute;
+  top: calc(50% - 35vh);
+  left: calc(50% - 35vw);
+  z-index: 999;
+  background-color: var(--branco);
+  box-shadow: 0px 0px 4px 4px var(--shadow);
+  transition: all .5s ease;
+  padding: 10px;
+  display: none;
+  opacity: 0;
+}
+.compra-bg{
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000008a;
+  z-index: 998;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .5s ease;
+  display: none;
+  opacity: 0;
+}
+
+.input-pagamento{
+  height: 24px;
+  border-radius: 10px;
+  padding: 3px 7px;
+  border: 2px solid var(--branco-escuro);
+}
+
+.prosseguir-compra-botao{
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  background-color: var(--checked);
+  border: 10px solid #00000000;
+  background-image: url('../../../img/icons/prosseguir-icon-white.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  box-sizing: border-box;
+  margin: 20px;
+}
+
+input.input-pagamento:focus-visible,
+input.input-pagamento:focus,
+input.input-pagamento:focus-within{
+  border: 2px solid var(--branco-escuro);
+  box-shadow: none;
+}
